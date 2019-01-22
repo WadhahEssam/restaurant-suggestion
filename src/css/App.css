@@ -12,7 +12,7 @@ p {
 }
 
 body {
-  background: url(/img/background3.jpg) no-repeat center center fixed; 
+  background: url('https://wadhahessam.github.io/restaurant-suggestion/img/background3.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
