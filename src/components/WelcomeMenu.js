@@ -31,15 +31,13 @@ class WelcomeMenu extends Component {
       opacity: 0.9,
     },
     logo: {
-      opacity: 1,
+      opacity: 0.9,
       top: '25px',
       height: '46%',
     },
     suggestButton: {
       opacity: 0.9,
-      height: '12%',
-      width: '48%',
-      top: '40px',
+      top: '8%',
     }
   }
 

@@ -38,6 +38,13 @@
   -webkit-box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
   -moz-box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
   box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
+  cursor: pointer;
+}
+
+.suggest-button:hover {
+  -webkit-box-shadow: 0px 3px 62px 17px rgba(148,148,148,1);
+  -moz-box-shadow: 0px 3px 62px 17px rgba(148,148,148,1);
+  box-shadow: 0px 3px 62px 17px rgba(148,148,148,1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,4 +52,8 @@
     height: 300px;
     width: 300px;
   }  
+  .suggest-button {
+    font-size: 19px;
+    height: 15%;
+  }
 }
