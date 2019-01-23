@@ -3,6 +3,7 @@ import anime from 'animejs';
 import axios from 'axios';
 import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
+import WelcomeMenuAnimation from '../animation/WelcomeMenuAnimation';
 import playStoreIcon from '../img/play-store-icon.svg';
 import appStoreIcon from '../img/app-store-icon.svg';
 import loadingIcon from '../img/loading-icon.svg';
@@ -17,14 +18,15 @@ class WelcomeMenu extends Component {
   }
 
   componentDidMount() {
-    this.startAnimation();
+    WelcomeMenuAnimation.startAnimation();
   }
 
   onClickSuggestButton = async () => {
     this.setState({loading: true});
-    this.loadingAnimation();
+    WelcomeMenuAnimation.loadingAnimation();
     // let restaurant = await axios.get('https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&g et_param=value');
-    let restaurant = await axios.post(`https://fadfadah.net/wainnakel/getInformation`, {lat: "26.2716025", long: "50.2017993"})
+    let restaurant = await axios
+    .post(`https://fadfadah.net/wainnakel/getInformation`, {lat: "26.2716025", long: "50.2017993"})
     console.log('this is coming from my server');
     console.log(restaurant.data)
     this.setState({isFetched: true})
@@ -49,7 +51,7 @@ class WelcomeMenu extends Component {
       console.log('this is not a mobile');
     }
     return(
-      <div className="welcomeMenu">
+      <div style={{display: 'block'}} className="welcomeMenu">
         <img src={logo} className="logo" alt="logo" />
         <button onClick={this.onClickSuggestButton} className="suggest-button">
           {this.renderSuggestButtonContent()}
@@ -92,39 +94,7 @@ class WelcomeMenu extends Component {
   }
 
   startAnimation = () => {
-    let welcomeMenuAnimation = anime.timeline();
-    welcomeMenuAnimation
-      .add({
-        delay: 200,
-        targets: '.welcomeMenu',
-        easing: 'easeInOutSine',
-        duration: 300,
-        opacity: this.cssAfterAnimation.welcomeMenu.opacity,
-      })
-      .add({
-        delay: 250,
-        targets: '.logo',
-        easing: 'easeInOutSine',
-        duration: 500,
-        opacity: this.cssAfterAnimation.logo.opacity,
-        height: this.cssAfterAnimation.logo.height,
-        top: this.cssAfterAnimation.logo.top,
-      })
-      .add({
-        delay: 0,
-        targets: '.suggest-button',
-        easing: 'easeInOutSine',
-        duration: 500,
-        opacity: this.cssAfterAnimation.suggestButton.opacity,
-        top: this.cssAfterAnimation.suggestButton.top,
-      })
-      .add({
-        delay: 0,
-        targets: '.extra-info',
-        easing: 'easeInOutSine',
-        duration: 300,
-        opacity: this.cssAfterAnimation.extraInfo.opacity,
-      })
+
   }
 
   loadingAnimation = () => {

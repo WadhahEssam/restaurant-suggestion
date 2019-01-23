@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WelcomeMenu from './components/WelcomeMenu';
+import SuggestionScreen from './components/SuggestionScreen';
 import './css/App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <WelcomeMenu/>
+        <SuggestionScreen/>
       </div>
     );
   }

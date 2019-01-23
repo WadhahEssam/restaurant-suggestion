@@ -1,0 +1,7 @@
+
+.body-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; /* aligns on vertical for column */
+  align-items: center; /* aligns on horizontal for column */
+}

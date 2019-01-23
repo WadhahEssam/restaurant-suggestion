@@ -1,0 +1,30 @@
+.footer-section {
+  position: fixed;
+  bottom: 0px;
+  background-color: #c78523c4;
+  width: 500px;
+  height: 8%;
+  left: calc(50% - 250px);
+  border-radius: 19px 16px 0px 0px;
+  box-shadow: 0px 2px 29px 12px rgba(86, 86, 86, 0.99);
+  -webkit-box-shadow: 0px 2px 29px 12px rgba(109, 109, 109, 0.99);
+  -moz-box-shadow: 0px 2px 29px 12px rgba(86, 86, 86, 0.99);
+}
+
+.footer-suggest-button {
+  width: 195px;
+  height: 72%;
+  position: relative;
+  top: 9px;
+  font-size: 21px;
+  color: #bb8008;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-suggest-button:hover {
+  -webkit-box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
+  -moz-box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
+  box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
+}
+

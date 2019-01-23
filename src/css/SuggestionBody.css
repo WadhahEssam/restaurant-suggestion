@@ -1,0 +1,18 @@
+.suggestion-body {
+  padding: 20px 20px 20px 20px;
+  min-width: 326px;
+  margin: auto;
+  box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
+  -webkit-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
+  -moz-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
+  top: 0px;
+  right: 0;
+  left: 0;
+  border-radius: 5px;
+  width: 70%;
+  background-color: white;
+  height: calc(92% - 59px);
+  position: fixed;
+  border-radius: 0px 0px 7px 7px;
+  opacity: 0.95;
+}
