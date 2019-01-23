@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import '../css/SuggestionBody.css';
 import logo from '../img/logo2.png'
+import ReactStars from 'react-stars'
 
 class SuggestionBody extends Component {
+
+  ratingChanged = () => {
+    console.log('rating changed');
+  }
+
   render() {
     return(
       <div>
@@ -16,7 +22,18 @@ class SuggestionBody extends Component {
               />
             </div>
             <div className="restaurant-main-information">
-              <h3 className="restaurant-name">مطعم أبو نواس</h3>
+              <h3 className="restaurant-name">مطعم الشرق الاوسط</h3>
+              <div className="rating">
+                <ReactStars
+                  id="stars"
+                  count={5}
+                  size={20}
+                  edit={false}
+                  color2={'#ffd700'}
+                  value={4.5}
+                />
+                <h5 className="rating-value">8.9/10</h5>
+              </div>
             </div>
           </div>
         </div>

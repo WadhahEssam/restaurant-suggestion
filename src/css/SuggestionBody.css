@@ -22,7 +22,7 @@
 .logo2 {
   height: 20%;
   position: relative;
-  top: -16px;
+  top: -7px;
 }
 
 .restaurant-information-section {
@@ -49,15 +49,30 @@
   height: 100%;
   postion: relative;
   position: relative;
-  bottom: 50%;
-  margin-left: 10%;
+  bottom: 17%;
+  margin-left: 5%;
 }
 
 .restaurant-name {
-  max-width: 198px;
+  width: 220px;
   color: #9e6814;
   padding: 0px;
   margin: 0px;
   white-space: nowrap;
   overflow: hidden;
+  /* top: 22px; */
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  left: -23px;
+}
+
+.rating-value {
+  width: 55px;
+  position: relative;
+  bottom: 26px;
+  left: 99px;
+  color: #dab800;
 }
