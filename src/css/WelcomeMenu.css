@@ -1,4 +1,4 @@
-.welcomeMenu {
+.welcome-menu {
   position: absolute;
   height: 500px;
   width: 500px;
@@ -109,7 +109,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .welcomeMenu {
+  .welcome-menu {
     height: 300px;
     width: 300px;
   }  
