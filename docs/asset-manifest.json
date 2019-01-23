@@ -1,14 +1,16 @@
 {
-  "main.css": "./static/css/main.6eb12dfd.chunk.css",
-  "main.js": "./static/js/main.1ddfeaab.chunk.js",
-  "main.js.map": "./static/js/main.1ddfeaab.chunk.js.map",
-  "static/js/1.1dcdb824.chunk.js": "./static/js/1.1dcdb824.chunk.js",
-  "static/js/1.1dcdb824.chunk.js.map": "./static/js/1.1dcdb824.chunk.js.map",
+  "main.css": "./static/css/main.017aa4ac.chunk.css",
+  "main.js": "./static/js/main.db95ae62.chunk.js",
+  "main.js.map": "./static/js/main.db95ae62.chunk.js.map",
+  "static/js/1.d24bd1b1.chunk.js": "./static/js/1.d24bd1b1.chunk.js",
+  "static/js/1.d24bd1b1.chunk.js.map": "./static/js/1.d24bd1b1.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
   "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/css/main.017aa4ac.chunk.css.map": "./static/css/main.017aa4ac.chunk.css.map",
   "static/media/logo.png": "./static/media/logo.9dd676e4.png",
-  "static/css/main.6eb12dfd.chunk.css.map": "./static/css/main.6eb12dfd.chunk.css.map",
+  "static/media/app-store-icon.svg": "./static/media/app-store-icon.9cc2a278.svg",
+  "static/media/play-store-icon.svg": "./static/media/play-store-icon.f7dfa1e7.svg",
   "index.html": "./index.html",
-  "precache-manifest.e828154b65a47dcdf0737962314dd8c1.js": "./precache-manifest.e828154b65a47dcdf0737962314dd8c1.js",
+  "precache-manifest.79556e0209ce2006371e7976c549bd65.js": "./precache-manifest.79556e0209ce2006371e7976c549bd65.js",
   "service-worker.js": "./service-worker.js"
 }

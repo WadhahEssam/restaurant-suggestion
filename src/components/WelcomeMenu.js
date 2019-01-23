@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.png';
+import playStoreIcon from '../img/play-store-icon.svg';
+import appStoreIcon from '../img/app-store-icon.svg';
 import '../css/WelcomeMenu.css';
 import anime from 'animejs';
 import Platform from 'react-platform-js'
 
 class WelcomeMenu extends Component {
-
-
   componentDidMount() {
     this.startAnimation();
   }
@@ -21,6 +21,17 @@ class WelcomeMenu extends Component {
       <div className="welcomeMenu">
         <img src={logo} className="logo" alt="logo" />
         <button className="suggest-button"><p className="suggest-button-text">إقتراح</p></button>
+        <div className="extra-info">
+          <div className="download-application-links">
+            <div className="store-icon-div play-store-icon">
+              <img src={playStoreIcon} className="store-icon" alt="play store" />
+            </div>
+            <div className="store-icon-div app-store-icon">
+              <img src={appStoreIcon} className="store-icon" alt="app store" />
+            </div>
+          </div>
+          <div className="rights"><p>2019 © جميع الحقوق محفوظة</p></div>
+        </div>
       </div>
     );
   }
@@ -36,8 +47,11 @@ class WelcomeMenu extends Component {
       height: '46%',
     },
     suggestButton: {
-      opacity: 0.9,
+      opacity: 0.8,
       top: '8%',
+    },
+    extraInfo: {
+      opacity: 1,
     }
   }
 
@@ -67,6 +81,13 @@ class WelcomeMenu extends Component {
         duration: 500,
         opacity: this.cssAfterAnimation.suggestButton.opacity,
         top: this.cssAfterAnimation.suggestButton.top,
+      })
+      .add({
+        delay: 0,
+        targets: '.extra-info',
+        easing: 'easeInOutSine',
+        duration: 300,
+        opacity: this.cssAfterAnimation.extraInfo.opacity,
       })
   }
 }
