@@ -73,41 +73,6 @@ class WelcomeMenu extends Component {
       </div>
     );
   }
-
-  // Animation Section
-  cssAfterAnimation = {
-    welcomeMenu: {
-      opacity: 0.9,
-    },
-    logo: {
-      opacity: 0.9,
-      top: '25px',
-      height: '46%',
-    },
-    suggestButton: {
-      opacity: 0.8,
-      top: '8%',
-    },
-    extraInfo: {
-      opacity: 1,
-    }
-  }
-
-  startAnimation = () => {
-
-  }
-
-  loadingAnimation = () => {
-    let loadingAnimation = anime.timeline();
-    loadingAnimation
-      .add({
-        delay: 0,
-        targets: '.suggest-button',
-        easing: 'easeInOutSine',
-        duration: 300,
-        width: 70,
-      })
-  }
 }
 
 export default WelcomeMenu;
