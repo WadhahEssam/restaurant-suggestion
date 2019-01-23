@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
 import playStoreIcon from '../img/play-store-icon.svg';
 import appStoreIcon from '../img/app-store-icon.svg';
+import loadingIcon from '../img/loading-icon.svg';
 import poweredByFoursquare from '../img/powered-by-foursquare.png';
 import '../css/WelcomeMenu.css';
 import anime from 'animejs';
-import Platform from 'react-platform-js'
 
 class WelcomeMenu extends Component {
+  state = {
+    loading: false,
+  }
+
   componentDidMount() {
     this.startAnimation();
+  }
+
+  onClickSuggestButton = () => {
+    this.loadingAnimation();
+    this.setState({loading: true});
   }
 
   render() {
@@ -21,7 +31,13 @@ class WelcomeMenu extends Component {
     return(
       <div className="welcomeMenu">
         <img src={logo} className="logo" alt="logo" />
-        <button className="suggest-button"><p className="suggest-button-text">إقتراح</p></button>
+        <button onClick={this.onClickSuggestButton} className="suggest-button">
+          {
+            (this.state.loading === false) ? 
+            <p className="suggest-button-text">إقتراح</p> :
+            <img src={loadingIcon} className="loading-icon" alt="app store" />
+          }
+        </button>
         <div className="extra-info">
           <div className="download-application-links">
             <a href="https://play.google.com/store/apps/details?id=com.wainnakel.android" className="store-icon-div play-store-icon">
@@ -60,10 +76,10 @@ class WelcomeMenu extends Component {
   }
 
   startAnimation = () => {
-    var welcomeMenuAnimation = anime.timeline();
+    let welcomeMenuAnimation = anime.timeline();
     welcomeMenuAnimation
       .add({
-        delay: 500,
+        delay: 200,
         targets: '.welcomeMenu',
         easing: 'easeInOutSine',
         duration: 300,
@@ -92,6 +108,18 @@ class WelcomeMenu extends Component {
         easing: 'easeInOutSine',
         duration: 300,
         opacity: this.cssAfterAnimation.extraInfo.opacity,
+      })
+  }
+
+  loadingAnimation = () => {
+    let loadingAnimation = anime.timeline();
+    loadingAnimation
+      .add({
+        delay: 0,
+        targets: '.suggest-button',
+        easing: 'easeInOutSine',
+        duration: 300,
+        width: 70,
       })
   }
 }
