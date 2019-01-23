@@ -50,7 +50,7 @@
 }
 
 .store-icon {
-  height: 26px;
+  height: 24px;
 }
 
 .play-store-icon {
@@ -70,8 +70,8 @@
   height: 38px;
   width: 40px;
   border-radius: 50%;
-  padding-top: 12px;
-  padding-left: 13px;
+  padding-top: 15px;
+  padding-left: 15px;
   cursor: pointer;
 }
 
