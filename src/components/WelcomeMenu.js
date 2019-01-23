@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
+import anime from 'animejs';
+import axios from 'axios';
 import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
 import playStoreIcon from '../img/play-store-icon.svg';
 import appStoreIcon from '../img/app-store-icon.svg';
 import loadingIcon from '../img/loading-icon.svg';
+import successIcon from '../img/success-icon.svg';
 import poweredByFoursquare from '../img/powered-by-foursquare.png';
 import '../css/WelcomeMenu.css';
-import anime from 'animejs';
 
 class WelcomeMenu extends Component {
   state = {
     loading: false,
+    isFetched: false,
   }
 
   componentDidMount() {
     this.startAnimation();
   }
 
-  onClickSuggestButton = () => {
-    this.loadingAnimation();
+  onClickSuggestButton = async () => {
     this.setState({loading: true});
+    this.loadingAnimation();
+    let restaurant = await axios.get('https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&g et_param=value');
+    console.log(restaurant.data)
+    this.setState({isFetched: true})
+  }
+
+  renderSuggestButtonContent = () => {
+    if (this.state.isFetched === true) {
+      return(<img src={successIcon} className="success-icon" alt="success icon" />)
+    }
+    else if (this.state.loading === false) {
+      return(<p className="suggest-button-text">إقتراح</p>);
+    } 
+    else if (this.state.loading === true) {
+      return(<img src={loadingIcon} className="loading-icon" alt="loading icoin" />);
+    }
   }
 
   render() {
@@ -32,11 +50,7 @@ class WelcomeMenu extends Component {
       <div className="welcomeMenu">
         <img src={logo} className="logo" alt="logo" />
         <button onClick={this.onClickSuggestButton} className="suggest-button">
-          {
-            (this.state.loading === false) ? 
-            <p className="suggest-button-text">إقتراح</p> :
-            <img src={loadingIcon} className="loading-icon" alt="app store" />
-          }
+          {this.renderSuggestButtonContent()}
         </button>
         <div className="extra-info">
           <div className="download-application-links">

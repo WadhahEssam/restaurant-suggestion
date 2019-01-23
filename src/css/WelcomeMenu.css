@@ -102,6 +102,12 @@
   top: 5px;
 }
 
+.success-icon {
+  position: relative;
+  height: 34px;
+  top: 6px;
+}
+
 @media only screen and (max-width: 768px) {
   .welcomeMenu {
     height: 300px;
@@ -115,7 +121,6 @@
     position: fixed;
     bottom: 10px;
     width: 170px;
-    /* margin-top: 51px; */
     left: calc(50% - 85px);
   }
   .store-icon-div {
@@ -142,7 +147,13 @@
 
   .loading-icon {
     position: relative;
-    height: 35px;
-    top: -1px;
+    height: 25px;
+    top: 3px;
+  }
+
+  .success-icon {
+    position: relative;
+    height: 28px;
+    top: 2px;
   }
 }
