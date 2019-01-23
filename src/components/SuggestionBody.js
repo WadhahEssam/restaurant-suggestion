@@ -34,6 +34,9 @@ class SuggestionBody extends Component {
                 />
                 <h5 className="rating-value">8.9/10</h5>
               </div>
+              <div className="is-open">
+                <h6 className="is-open-text">مقتوح</h6>
+              </div>
             </div>
           </div>
         </div>

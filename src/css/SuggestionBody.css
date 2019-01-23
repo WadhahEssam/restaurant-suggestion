@@ -49,12 +49,12 @@
   height: 100%;
   postion: relative;
   position: relative;
-  bottom: 17%;
+  bottom: 0px;
   margin-left: 5%;
 }
 
 .restaurant-name {
-  width: 220px;
+  width: 208px;
   color: #9e6814;
   padding: 0px;
   margin: 0px;
@@ -75,4 +75,26 @@
   bottom: 26px;
   left: 99px;
   color: #dab800;
+}
+
+.is-open {
+  position: relative;
+  bottom: 23px;
+  background-color: #2eb32e;
+  color: white;
+  width: 45px;
+  border-radius: 17px;
+  margin: auto;
+}
+
+.is-open-text {
+  display: inline-block;
+}
+
+.is-open-circle {
+  display: inline-block;
+  font-size: 36px;
+  position: absolute;
+  top: -22px;
+  margin-left: 6px;
 }
