@@ -52,7 +52,7 @@ class WelcomeMenu extends Component {
       console.log('this is not a mobile');
     }
     return(
-      <div style={{display: 'block'}} className="welcome-menu">
+      <div style={{display: 'none'}} className="welcome-menu">
         <img src={logo} className="logo" alt="logo" />
         <button onClick={this.onClickSuggestButton} className="suggest-button">
           {this.renderSuggestButtonContent()}
