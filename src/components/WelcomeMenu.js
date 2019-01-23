@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../img/logo.png';
 import playStoreIcon from '../img/play-store-icon.svg';
 import appStoreIcon from '../img/app-store-icon.svg';
+import poweredByFoursquare from '../img/powered-by-foursquare.png';
 import '../css/WelcomeMenu.css';
 import anime from 'animejs';
 import Platform from 'react-platform-js'
@@ -23,14 +24,17 @@ class WelcomeMenu extends Component {
         <button className="suggest-button"><p className="suggest-button-text">إقتراح</p></button>
         <div className="extra-info">
           <div className="download-application-links">
-            <div className="store-icon-div play-store-icon">
+            <a href="https://play.google.com/store/apps/details?id=com.wainnakel.android" className="store-icon-div play-store-icon">
               <img src={playStoreIcon} className="store-icon" alt="play store" />
-            </div>
-            <div className="store-icon-div app-store-icon">
+            </a>
+            <a href="https://itunes.apple.com/sa/app/wyn-nakl/id718380069?mt=8" className="store-icon-div app-store-icon">
               <img src={appStoreIcon} className="store-icon" alt="app store" />
-            </div>
+            </a>
           </div>
           <div className="rights"><p>2019 © جميع الحقوق محفوظة</p></div>
+          <div className="foursquare">
+            <img src={poweredByFoursquare} className="foursquare-icon" alt="powered by foursquare" />
+          </div>
         </div>
       </div>
     );

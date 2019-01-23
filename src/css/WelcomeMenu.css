@@ -89,6 +89,13 @@
   opacity: 0;
 }
 
+.foursquare-icon{
+  width: 170px;
+  position: fixed;
+  bottom: 15px;
+  left: calc(50% - 85px);
+}
+
 @media only screen and (max-width: 768px) {
   .welcomeMenu {
     height: 300px;
@@ -118,7 +125,11 @@
     padding-left: 13px;
     cursor: pointer;
   }
-  
+
+  .foursquare-icon {
+    bottom: 33px;
+  }
+
   .store-icon {
     height: 18px;
   }
