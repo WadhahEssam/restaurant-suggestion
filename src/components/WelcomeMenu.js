@@ -23,7 +23,9 @@ class WelcomeMenu extends Component {
   onClickSuggestButton = async () => {
     this.setState({loading: true});
     this.loadingAnimation();
-    let restaurant = await axios.get('https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&g et_param=value');
+    // let restaurant = await axios.get('https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&g et_param=value');
+    let restaurant = await axios.post(`https://fadfadah.net/wainnakel/getInformation`, {lat: "26.2716025", long: "50.2017993"})
+    console.log('this is coming from my server');
     console.log(restaurant.data)
     this.setState({isFetched: true})
   }
