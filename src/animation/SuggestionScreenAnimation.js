@@ -9,7 +9,7 @@ export default class WelcomeMenuAnimation {
     let showSuggestionScreen = anime.timeline();
     showSuggestionScreen
       .add({
-        delay: 1300,
+        delay: 1000,
         targets: '.suggestion-body',
         duration: 800,
         easing: 'easeInOutSine',
@@ -19,7 +19,7 @@ export default class WelcomeMenuAnimation {
     let showFooterSection = anime.timeline();
     showFooterSection
       .add({
-        delay: 1300,
+        delay: 1000,
         targets: '.footer-section',
         duration: 800,
         easing: 'easeInOutSine',

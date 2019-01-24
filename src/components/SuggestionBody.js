@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import ReactMapGL from 'react-map-gl';
 import '../css/SuggestionBody.css';
 import logo from '../img/logo2.png'
 import ReactStars from 'react-stars'
 
 class SuggestionBody extends Component {
+  state = {
+    viewport: {
+      width: '100%',
+      height: '100%',
+      latitude: 37.7577,
+      longitude: -122.4376,
+      zoom: 8
+    }
+  };
 
   ratingChanged = () => {
     console.log('rating changed');
@@ -35,8 +45,15 @@ class SuggestionBody extends Component {
                 <h5 className="rating-value">8.9/10</h5>
               </div>
               <div className="is-open">
-                <h6 className="is-open-text">مقتوح</h6>
+                <h6 className="is-open-text">مفتوح</h6>
               </div>
+            </div>
+            <div className="map-div">
+              <ReactMapGL
+                {...this.state.viewport}
+                mapboxApiAccessToken = "pk.eyJ1Ijoid2FkYWhlc2FtMjEiLCJhIjoiY2pyODJhMDhjMDI2ZTQzb2RkNjgxMHY0diJ9.W9cODURNmVYUekoS1b2LkQ"
+                onViewportChange={(viewport) => this.setState({viewport})}
+              />
             </div>
           </div>
         </div>

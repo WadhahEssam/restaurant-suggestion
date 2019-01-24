@@ -98,3 +98,10 @@
   top: -22px;
   margin-left: 6px;
 }
+
+.map-div {
+  display: block;
+  height: 230%;
+  text-align: start;
+  background-color: white;
+}
