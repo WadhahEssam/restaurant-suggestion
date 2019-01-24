@@ -53,4 +53,7 @@
 
 .map-pin {
   height: 50px;
+  position: relative;
+  bottom: 49px;
+  right: 30px;
 }
