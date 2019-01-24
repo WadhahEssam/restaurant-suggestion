@@ -5,8 +5,8 @@
   box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
   -webkit-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
   -moz-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
-  /* top: -100%; */
-  top: 0px;
+  top: -100%;
+  /* top: 0px; */
   right: 0;
   left: 0;
   border-radius: 5px;
@@ -44,60 +44,6 @@
   border: 1px solid black;
 }
 
-.restaurant-main-information {
-  display: inline-block;
-  height: 100%;
-  postion: relative;
-  position: relative;
-  bottom: 0px;
-  margin-left: 5%;
-}
-
-.restaurant-name {
-  width: 208px;
-  color: #9e6814;
-  padding: 0px;
-  margin: 0px;
-  white-space: nowrap;
-  overflow: hidden;
-  /* top: 22px; */
-}
-
-.rating {
-  display: inline-block;
-  position: relative;
-  left: -23px;
-}
-
-.rating-value {
-  width: 55px;
-  position: relative;
-  bottom: 26px;
-  left: 99px;
-  color: #dab800;
-}
-
-.is-open {
-  position: relative;
-  bottom: 23px;
-  background-color: #2eb32e;
-  color: white;
-  width: 45px;
-  border-radius: 17px;
-  margin: auto;
-}
-
-.is-open-text {
-  display: inline-block;
-}
-
-.is-open-circle {
-  display: inline-block;
-  font-size: 36px;
-  position: absolute;
-  top: -22px;
-  margin-left: 6px;
-}
 
 .map-div {
   display: block;

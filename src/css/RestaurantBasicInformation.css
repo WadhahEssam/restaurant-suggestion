@@ -1,0 +1,56 @@
+.restaurant-main-information {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  bottom: 0px;
+  margin-left: 5%;
+}
+
+.restaurant-name {
+  width: 208px;
+  color: #9e6814;
+  padding: 0px;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  /* top: 22px; */
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  left: -23px;
+}
+
+.rating-value {
+  width: 55px;
+  position: relative;
+  bottom: 26px;
+  left: 99px;
+  color: #dab800;
+}
+
+.is-open {
+  position: relative;
+  bottom: 23px;
+  background-color: #2eb32e;
+  color: white;
+  width: 45px;
+  border-radius: 17px;
+  margin: auto;
+}
+
+.is-open-text {
+  display: inline-block;
+}
+
+
+.is-closed {
+  position: relative;
+  bottom: 23px;
+  background-color: #b32727;
+  color: white;
+  width: 45px;
+  border-radius: 17px;
+  margin: auto;
+}

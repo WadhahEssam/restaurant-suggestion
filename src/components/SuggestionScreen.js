@@ -8,8 +8,8 @@ class SuggestionScreen extends Component {
   render() {
     return(
       <div className="body-wrapper" style={{display: 'block'}}>
-        <SuggestionBody/>
-        <SuggestionFooter/>
+        <SuggestionBody restaurant={this.props.state.restaurant}/>
+        <SuggestionFooter setState={(newState) => {this.setState(newState)}} state={this.state}/>
       </div>
     );
   }

@@ -3,7 +3,6 @@ import axios from 'axios';
 import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
 import WelcomeMenuAnimation from '../animation/WelcomeMenuAnimation';
-import SuggestionScreenAnimation from '../animation/SuggestionScreenAnimation';
 import playStoreIcon from '../img/play-store-icon.svg';
 import appStoreIcon from '../img/app-store-icon.svg';
 import loadingIcon from '../img/loading-icon.svg';
@@ -28,8 +27,8 @@ class WelcomeMenu extends Component {
     let restaurant = await axios
     .post(`https://fadfadah.net/wainnakel/getInformation`, {lat: "26.2716025", long: "50.2017993"})
     console.log('this is coming from my server');
-    console.log(restaurant.data)
-    this.setState({isFetched: true})
+    this.setState({isFetched: true});
+    this.props.setState({restaurant: restaurant.data});
     WelcomeMenuAnimation.hideAnimation();
   }
 
@@ -52,7 +51,7 @@ class WelcomeMenu extends Component {
       console.log('this is not a mobile');
     }
     return(
-      <div style={{display: 'none'}} className="welcome-menu">
+      <div style={{display: 'block'}} className="welcome-menu">
         <img src={logo} className="logo" alt="logo" />
         <button onClick={this.onClickSuggestButton} className="suggest-button">
           {this.renderSuggestButtonContent()}
