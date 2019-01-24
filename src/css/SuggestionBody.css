@@ -44,10 +44,13 @@
   border: 1px solid black;
 }
 
-
 .map-div {
   display: block;
   height: 230%;
   text-align: start;
   background-color: white;
+}
+
+.map-pin {
+  height: 50px;
 }
