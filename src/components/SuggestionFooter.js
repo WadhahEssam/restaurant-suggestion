@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../css/SuggestionFooter.css';
 import loadingIcon from '../img/loading-icon.svg';
+import SuggestionScreenAnimation from '../animation/SuggestionScreenAnimation';
 
 class SuggestionFooter extends Component {
   state = {
@@ -17,7 +18,10 @@ class SuggestionFooter extends Component {
       lat: this.props.state.currentLocation.latitude,
       long: this.props.state.currentLocation.longitude
     });
-    this.props.setState({restaurant: restaurant.data})
+    SuggestionScreenAnimation.anotherSuggestion();
+    setTimeout(() => {
+      this.props.setState({restaurant: restaurant.data})
+    }, 500)
     this.setState({loading: false});
   }
 

@@ -14,7 +14,7 @@ class SuggestionBody extends Component {
       height: '100%',
       latitude: 0,
       longitude: 0,
-      zoom: 15
+      zoom: 14
     },
     currentPin: {
       latitude: 0,

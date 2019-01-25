@@ -26,4 +26,23 @@ export default class WelcomeMenuAnimation {
         bottom: '0px',
       })
   }
+
+  static anotherSuggestion() {
+    let anotherSuggestion = anime.timeline();
+    anotherSuggestion
+      .add({
+        delay: 0,
+        targets: '.restaurant-information-section, .links-div, .map-div',
+        duration: 500,
+        easing: 'easeInOutSine',
+        opacity: 0,
+      })
+      .add({
+        delay: 200,
+        targets: '.restaurant-information-section, .links-div, .map-div',
+        duration: 500,
+        easing: 'easeInOutSine',
+        opacity: 1,
+      })
+  }
 }

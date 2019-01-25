@@ -36,7 +36,7 @@ class WelcomeMenu extends Component {
   }
 
   renderSuggestButtonContent = () => {
-    if (this.state.currentLocation === null) {
+    if (this.props.state.currentLocation === null) {
       return(<p className="suggest-button-allow-location">قم بالسماح بمشاركة بالموقع</p>);
     }
     else if (this.state.isFetched === true) {
