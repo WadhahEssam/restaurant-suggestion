@@ -25,12 +25,26 @@ class SuggestionFooter extends Component {
     this.setState({loading: false});
   }
 
-  renderSuggestionButtonContent = () => {
+  renderSuggestionButton = () => {
     if (this.state.loading === false) {
-      return 'إقتراح اخر'
+      return (
+          <button 
+          onClick={this.onClickAnotherSuggestionButton} 
+          className="footer-suggest-button"
+        >
+          إقتراح اخر
+        </button>
+      );
     } 
     else if (this.state.loading === true) {
-      return(<img src={loadingIcon} className="loading-icon-2" alt="loading icoin" />);
+      return (
+          <button 
+          onClick={this.onClickAnotherSuggestionButton} 
+          className="footer-suggest-button-loading"
+        >
+          <img src={loadingIcon} className="loading-icon-2" alt="loading icoin" />
+        </button>
+      );
     }
   }
 
@@ -38,12 +52,7 @@ class SuggestionFooter extends Component {
     return(
       <div>
         <div className="footer-section">
-          <button 
-            onClick={this.onClickAnotherSuggestionButton} 
-            className="footer-suggest-button"
-          >
-            {this.renderSuggestionButtonContent()}
-          </button>
+          {this.renderSuggestionButton()}
         </div>
       </div>
     );
