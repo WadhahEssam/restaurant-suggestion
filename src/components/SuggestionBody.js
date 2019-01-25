@@ -19,19 +19,22 @@ class SuggestionBody extends Component {
     currentPin: {
       latitude: 0,
       longitude: 0,
-    }
+    },
+    firstTime: true,
   };
 
+  oldLat = 0;
+
   componentDidUpdate() {
-    if (this.props.restaurant != null && this.state.viewport.latitude == 0) {
+    if (this.props.restaurant != null && (this.state.firstTime == true || this.props.restaurant.lat != this.oldLat)) {
+      this.oldLat = this.props.restaurant.lat;
       let viewport = cloneDeep(this.state.viewport);
       viewport.latitude = parseFloat(this.props.restaurant.lat);
       viewport.longitude = parseFloat(this.props.restaurant.lon);
-
       let currentPin = cloneDeep(this.state.viewport);
       currentPin.latitude = parseFloat(this.props.restaurant.lat);
       currentPin.longitude = parseFloat(this.props.restaurant.lon);
-      this.setState({viewport, currentPin});
+      this.setState({viewport, currentPin, firstTime: false});
     }
   }
 

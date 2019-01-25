@@ -6,13 +6,24 @@ import './css/App.css';
 class App extends Component {
   state = {
     restaurant: null,
+    currentLocation: null,
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
+  getCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.setState({currentLocation: {latitude: position.coords.latitude, longitude: position.coords.longitude}})
+      }, function() {});
+    } else {
+      // Browser doesn't support Geolocation
+    }
   }
 
   render() {
+    console.log(this.state);
+    if (this.state.currentLocation == null) {
+      this.getCurrentLocation();
+    }
     return (
       <div className="App">
         <WelcomeMenu setState={(newState) => {this.setState(newState)}} state={this.state}/>

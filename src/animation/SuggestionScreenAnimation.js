@@ -26,6 +26,4 @@ export default class WelcomeMenuAnimation {
         bottom: '0px',
       })
   }
-
-
 }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { cloneDeep } from 'lowdash';
-import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
 import WelcomeMenuAnimation from '../animation/WelcomeMenuAnimation';
 import playStoreIcon from '../img/play-store-icon.svg';
@@ -15,21 +13,10 @@ class WelcomeMenu extends Component {
   state = {
     loading: false,
     isFetched: false,
-    currentLocation: null,
   }
 
   componentDidMount() {
     WelcomeMenuAnimation.startAnimation();
-  }
-
-  getCurrentLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.setState({currentLocation: {latitude: position.coords.latitude, longitude: position.coords.longitude}})
-      }, function() {});
-    } else {
-      // Browser doesn't support Geolocation
-    }
   }
 
   onClickSuggestButton = async () => {
@@ -39,8 +26,8 @@ class WelcomeMenu extends Component {
     let restaurant = await axios
     .post(`https://fadfadah.net/wainnakel/getInformation`, 
     { 
-      lat: this.state.currentLocation.latitude,
-      long: this.state.currentLocation.longitude
+      lat: this.props.state.currentLocation.latitude,
+      long: this.props.state.currentLocation.longitude
     });
     console.log('this is coming from my server');
     this.setState({isFetched: true});
@@ -64,19 +51,10 @@ class WelcomeMenu extends Component {
   }
 
   render() {
-    if (this.state.currentLocation == null) {
-      this.getCurrentLocation();
-    }
-    console.log(this.state);
-    if (Platform.DeviceType == 'mobile') {
-      console.log('this is a mobile');
-    } else { 
-      console.log('this is not a mobile');
-    }
     return(
       <div style={{display: 'block'}} className="welcome-menu">
         <img src={logo} className="logo" alt="logo" />
-        <button onClick={this.onClickSuggestButton} disabled={(this.state.currentLocation==null)} className="suggest-button">
+        <button onClick={this.onClickSuggestButton} disabled={(this.props.state.currentLocation==null)} className="suggest-button">
           {this.renderSuggestButtonContent()}
         </button>
         <div className="extra-info">

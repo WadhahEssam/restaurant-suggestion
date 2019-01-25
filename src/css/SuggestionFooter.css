@@ -31,3 +31,8 @@
   box-shadow: 0px 3px 62px 7px rgba(148,148,148,1);
 }
 
+.loading-icon-2 {
+  position: relative;
+  height: 35px;
+  top: 5px;
+}
