@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "./static/media/app-store-icon.9cc2a278.svg"
   },
   {
-    "revision": "48bb54173a814b616012",
-    "url": "./static/css/main.1a50c575.chunk.css"
+    "revision": "650eb3743d45059c93b7",
+    "url": "./static/css/main.f300da3a.chunk.css"
   },
   {
-    "revision": "647023e437756b8ed4ad",
-    "url": "./static/js/1.647023e4.chunk.js"
+    "revision": "1e64d3387c3a9bf4a3fa",
+    "url": "./static/js/1.1e64d338.chunk.js"
   },
   {
     "revision": "4a686d48d5a089750c49",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/play-store-icon.f7dfa1e7.svg"
   },
   {
-    "revision": "48bb54173a814b616012",
-    "url": "./static/js/main.48bb5417.chunk.js"
+    "revision": "650eb3743d45059c93b7",
+    "url": "./static/js/main.650eb374.chunk.js"
   },
   {
     "revision": "a6fd5ae2108cdfb7133a3bf586850061",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "./static/media/map-pin.bb73c2e5.png"
   },
   {
-    "revision": "3ee3d4b972a9a1e8db9c67c4483cc007",
+    "revision": "cf9cedf20811aa612bfd202106b603b7",
     "url": "./index.html"
   }
 ];
