@@ -32,7 +32,7 @@
 
 .is-open {
   position: relative;
-  bottom: 23px;
+  bottom: 20px;
   background-color: #2eb32e;
   color: white;
   width: 45px;
@@ -47,7 +47,7 @@
 
 .is-closed {
   position: relative;
-  bottom: 23px;
+  bottom: 20px;
   background-color: #b32727;
   color: white;
   width: 45px;
