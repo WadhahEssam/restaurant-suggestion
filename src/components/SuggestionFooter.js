@@ -11,18 +11,20 @@ class SuggestionFooter extends Component {
   }
 
   onClickAnotherSuggestionButton = async () => {
-    this.setState({loading: true});
-    let restaurant = await axios
-    .post(`https://fadfadah.net/wainnakel/getInformation`, 
-    { 
-      lat: this.props.state.currentLocation.latitude,
-      long: this.props.state.currentLocation.longitude
-    });
-    SuggestionScreenAnimation.anotherSuggestion();
-    setTimeout(() => {
-      this.props.setState({restaurant: restaurant.data})
-    }, 500)
-    this.setState({loading: false});
+    if (this.state.loading == false) {
+      this.setState({loading: true});
+      let restaurant = await axios
+      .post(`https://fadfadah.net/wainnakel/getInformation`, 
+      { 
+        lat: this.props.state.currentLocation.latitude,
+        long: this.props.state.currentLocation.longitude
+      });
+      SuggestionScreenAnimation.anotherSuggestion();
+      setTimeout(() => {
+        this.props.setState({restaurant: restaurant.data})
+      }, 500)
+      this.setState({loading: false});
+    }
   }
 
   renderSuggestionButton = () => {
