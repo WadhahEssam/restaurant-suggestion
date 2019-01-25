@@ -72,13 +72,16 @@ export default class WelcomeMenuAnimation {
     let hideAnimation = anime.timeline();
     hideAnimation
       .add({
-        delay: 500,
+        delay: 300,
         targets: '.rights, .foursquare, .download-application-links, .logo, .suggest-button',
         duration: 500,
         opacity: 0
       })
+
+    let hideAnimatin2 = anime.timeline();
+    hideAnimatin2
       .add({
-        delay: 0,
+        delay: 500,
         targets: '.welcome-menu',
         easing: 'easeInOutSine',
         duration: 700,
@@ -86,7 +89,9 @@ export default class WelcomeMenuAnimation {
         height: 0,
         top: '-1000px',
       })
+
     SuggestionScreenAnimation.showSuggestionScreen();
+
 
   }
 }
