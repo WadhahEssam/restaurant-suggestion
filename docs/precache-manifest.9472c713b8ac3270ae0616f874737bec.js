@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "./static/media/app-store-icon.9cc2a278.svg"
   },
   {
-    "revision": "71cf9943088285aae669",
-    "url": "./static/css/main.45e3f4d1.chunk.css"
+    "revision": "33b3193f2bf6bbc4b50a",
+    "url": "./static/css/main.33e5638a.chunk.css"
   },
   {
     "revision": "647023e437756b8ed4ad",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/play-store-icon.f7dfa1e7.svg"
   },
   {
-    "revision": "71cf9943088285aae669",
-    "url": "./static/js/main.71cf9943.chunk.js"
+    "revision": "33b3193f2bf6bbc4b50a",
+    "url": "./static/js/main.33b3193f.chunk.js"
   },
   {
     "revision": "a6fd5ae2108cdfb7133a3bf586850061",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "./static/media/map-pin.bb73c2e5.png"
   },
   {
-    "revision": "f60f7d4f25d0895c94d97fdd1fa74b27",
+    "revision": "8b5ab58ad1ac2ec2b7bd5466afb846b9",
     "url": "./index.html"
   }
 ];
