@@ -12,16 +12,20 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: url('https://wadhahessam.github.io/restaurant-suggestion/img/background3.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
   margin: 0;
   padding: 0;
   font-family: 'El Messiri', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #5d5d5d;
+  background: url('https://wadhahessam.github.io/restaurant-suggestion/img/background3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+
 }
 
