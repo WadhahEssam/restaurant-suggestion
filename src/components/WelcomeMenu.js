@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { cloneDeep } from 'lowdash';
 import Platform from 'react-platform-js'
 import logo from '../img/logo.png';
 import WelcomeMenuAnimation from '../animation/WelcomeMenuAnimation';
@@ -14,10 +15,21 @@ class WelcomeMenu extends Component {
   state = {
     loading: false,
     isFetched: false,
+    currentLocation: null,
   }
 
   componentDidMount() {
     WelcomeMenuAnimation.startAnimation();
+  }
+
+  getCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.setState({currentLocation: {latitude: position.coords.latitude, longitude: position.coords.longitude}})
+      }, function() {});
+    } else {
+      // Browser doesn't support Geolocation
+    }
   }
 
   onClickSuggestButton = async () => {
@@ -25,7 +37,11 @@ class WelcomeMenu extends Component {
     WelcomeMenuAnimation.loadingAnimation();
     // let restaurant = await axios.get('https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&g et_param=value');
     let restaurant = await axios
-    .post(`https://fadfadah.net/wainnakel/getInformation`, {lat: "26.2716025", long: "50.2017993"})
+    .post(`https://fadfadah.net/wainnakel/getInformation`, 
+    { 
+      lat: this.state.currentLocation.latitude,
+      long: this.state.currentLocation.longitude
+    });
     console.log('this is coming from my server');
     this.setState({isFetched: true});
     this.props.setState({restaurant: restaurant.data});
@@ -33,7 +49,10 @@ class WelcomeMenu extends Component {
   }
 
   renderSuggestButtonContent = () => {
-    if (this.state.isFetched === true) {
+    if (this.state.currentLocation === null) {
+      return(<p className="suggest-button-allow-location">قم بالسماح بمشاركة بالموقع</p>);
+    }
+    else if (this.state.isFetched === true) {
       return(<img src={successIcon} className="success-icon" alt="success icon" />)
     }
     else if (this.state.loading === false) {
@@ -41,10 +60,14 @@ class WelcomeMenu extends Component {
     } 
     else if (this.state.loading === true) {
       return(<img src={loadingIcon} className="loading-icon" alt="loading icoin" />);
-    }
+    } 
   }
 
   render() {
+    if (this.state.currentLocation == null) {
+      this.getCurrentLocation();
+    }
+    console.log(this.state);
     if (Platform.DeviceType == 'mobile') {
       console.log('this is a mobile');
     } else { 
@@ -53,7 +76,7 @@ class WelcomeMenu extends Component {
     return(
       <div style={{display: 'block'}} className="welcome-menu">
         <img src={logo} className="logo" alt="logo" />
-        <button onClick={this.onClickSuggestButton} className="suggest-button">
+        <button onClick={this.onClickSuggestButton} disabled={(this.state.currentLocation==null)} className="suggest-button">
           {this.renderSuggestButtonContent()}
         </button>
         <div className="extra-info">

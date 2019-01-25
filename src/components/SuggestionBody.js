@@ -41,7 +41,9 @@ class SuggestionBody extends Component {
       return(
         <div>
           <div className="suggestion-body">
-            <img src={logo} className="logo2" alt="logo" />
+            <a href="">
+              <img src={logo} className="logo2" alt="logo" />
+            </a>
             <div className="restaurant-information-section">
               <div className="restaurant-image-div">
                 <img 

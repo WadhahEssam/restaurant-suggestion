@@ -41,9 +41,8 @@
 }
 
 .is-open-text {
-  display: inline-blosck;
+  font-size: 12px;
 }
-
 
 .is-closed {
   position: relative;
@@ -53,4 +52,10 @@
   width: 45px;
   border-radius: 17px;
   margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .restaurant-main-information {
+    bottom: -4px;
+  }
 }
