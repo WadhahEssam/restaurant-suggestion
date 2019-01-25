@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import MapGL, {Marker, Popup, NavigationControl} from 'react-map-gl';
+import MapGL, {Marker } from 'react-map-gl';
 import { cloneDeep } from 'lodash';
 import RestaurantBasicInformation from '../components/ResturantBasicInformation';
 import '../css/SuggestionBody.css';
 import logo from '../img/logo2.png';
 import mapPin from '../img/map-pin.png';
-import foursquareLogo from '../img/foursquare-logo.png';
-import googleMapsLogo from '../img/google-maps-logo.png';
+import ExternalLinksSection from './ExternalLinksSection';
 
 class SuggestionBody extends Component {
   state = {
@@ -52,16 +51,7 @@ class SuggestionBody extends Component {
                 />
               </div>
               <RestaurantBasicInformation restaurant={this.props.restaurant}/>
-              <div className="links-div">
-                <a href="google.com">                
-                  <img src={googleMapsLogo} className="google-maps-logo link-logo"/>
-                </a>
-                <a href="foursquare.com">
-                  <img src={foursquareLogo} className="foursquare-logo link-logo"/>
-                </a>
-                <div className="box-shadow-div-left" />
-                <div className="box-shadow-div-right" />
-              </div>
+              <ExternalLinksSection restaurant={this.props.restaurant}/>
               <div className="map-div">
                 <MapGL
                   {...this.state.viewport}

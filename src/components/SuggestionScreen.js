@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SuggestionScreenAnimation from '../animation/SuggestionScreenAnimation';
 import SuggestionFooter from '../components/SuggestionFooter';
 import SuggestionBody from '../components/SuggestionBody';
 import '../css/SuggestionScreen.css';
