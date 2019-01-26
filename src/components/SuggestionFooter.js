@@ -11,7 +11,7 @@ class SuggestionFooter extends Component {
   }
 
   onClickAnotherSuggestionButton = async () => {
-    if (this.state.loading == false) {
+    if (this.state.loading === false) {
       this.setState({loading: true});
       let restaurant = await axios
       .post(`https://fadfadah.net/wainnakel/getInformation`, 
@@ -30,7 +30,7 @@ class SuggestionFooter extends Component {
   renderSuggestionButton = () => {
     if (this.state.loading === false) {
       return (
-          <button 
+        <button 
           onClick={this.onClickAnotherSuggestionButton} 
           className="footer-suggest-button"
         >
@@ -40,7 +40,7 @@ class SuggestionFooter extends Component {
     } 
     else if (this.state.loading === true) {
       return (
-          <button 
+        <button 
           onClick={this.onClickAnotherSuggestionButton} 
           className="footer-suggest-button-loading"
         >

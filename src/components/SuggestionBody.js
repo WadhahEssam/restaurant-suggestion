@@ -26,7 +26,7 @@ class SuggestionBody extends Component {
   oldLat = 0;
 
   componentDidUpdate() {
-    if (this.props.restaurant != null && (this.state.firstTime == true || this.props.restaurant.lat != this.oldLat)) {
+    if (this.props.restaurant !== null && (this.state.firstTime === true || this.props.restaurant.lat !== this.oldLat)) {
       this.oldLat = this.props.restaurant.lat;
       let viewport = cloneDeep(this.state.viewport);
       viewport.latitude = parseFloat(this.props.restaurant.lat);
