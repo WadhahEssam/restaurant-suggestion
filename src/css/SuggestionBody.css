@@ -5,8 +5,8 @@
   box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
   -webkit-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
   -moz-box-shadow: 0px 2px 29px 12px rgba(154, 154, 154, 0.99);
-  top: -100%;
-  /* top: 0px; */
+  /* top: -100%; */
+  top: 0px;
   right: 0;
   left: 0;
   border-radius: 5px;
@@ -15,7 +15,7 @@
   height: calc(92% - 59px);
   position: fixed;
   border-radius: 0px 0px 4px 4px;
-  opacity: 0.9;
+  opacity: 0;
   max-width: 800PX;
 }
 

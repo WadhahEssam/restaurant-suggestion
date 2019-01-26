@@ -15,7 +15,7 @@ class App extends Component {
         this.setState({currentLocation: {latitude: position.coords.latitude, longitude: position.coords.longitude}})
       }, function() {});
     } else {
-      // Browser doesn't support Geolocation
+      console.log('browser isn\'t supported');
     }
   }
 

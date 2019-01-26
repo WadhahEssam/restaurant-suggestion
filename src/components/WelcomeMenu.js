@@ -30,7 +30,7 @@ class WelcomeMenu extends Component {
       long: this.props.state.currentLocation.longitude
     });
     console.log('this is coming from my server');
-    this.setState({isFetched: true});
+    this.setState({isFetched: true, loading: false});
     this.props.setState({restaurant: restaurant.data});
     WelcomeMenuAnimation.hideAnimation();
   }
