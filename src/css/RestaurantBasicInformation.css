@@ -7,13 +7,14 @@
 }
 
 .restaurant-name {
-  width: 208px;
+  width: auto;
+  max-width: 204px;
+  min-width: 150px;
   color: #9e6814;
   padding: 0px;
   margin: 0px;
   white-space: nowrap;
   overflow: hidden;
-  /* top: 22px; */
 }
 
 .rating {
