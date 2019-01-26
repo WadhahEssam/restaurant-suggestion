@@ -41,7 +41,7 @@
 .restaurant-image {
   height: 75%;
   border-radius: 50%;
-  border: 1px solid #a9a9a9;
+  border: none;
   -webkit-box-shadow: -1px 3px 75px 5px rgba(171,171,171,1);
   -moz-box-shadow: -1px 3px 75px 5px rgba(171,171,171,1);
   box-shadow: -1px 3px 75px 5px rgba(171,171,171,1);
