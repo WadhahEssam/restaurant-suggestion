@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactStars from 'react-stars';
+import Helper from '../helper/Helper';
 import '../css/RestaurantBasicInformation.css';
 
 const RestaurantBasicInformation = ({restaurant}) => (
   <div className="restaurant-main-information">
-    <h3 className="restaurant-name">{restaurant.name}</h3>
+    <h3 className="restaurant-name">{Helper.extractRestaurantName(restaurant.name)}</h3>
     <div className="rating">
       <ReactStars
         id="stars"

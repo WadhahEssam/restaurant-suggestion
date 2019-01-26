@@ -1,9 +1,5 @@
 import anime from 'animejs';
 
-let cssAfterAnimation = {
-
-}
-
 export default class WelcomeMenuAnimation {
   static showSuggestionScreen() {
     let showSuggestionScreen = anime.timeline();
