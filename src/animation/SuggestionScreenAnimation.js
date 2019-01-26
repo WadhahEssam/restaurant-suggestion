@@ -13,7 +13,7 @@ export default class WelcomeMenuAnimation {
         targets: '.suggestion-body',
         duration: 800,
         easing: 'easeInOutSine',
-        opacity: 1,
+        opacity: 0.9,
       })
 
     let showFooterSection = anime.timeline();
